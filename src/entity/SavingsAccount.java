@@ -5,6 +5,8 @@ import java.util.Collections;
 public class SavingsAccount extends BankAccount{
     private double interestRate;
 
+
+
     public SavingsAccount(long accountNumber, String accountHolderName, long primaryPhoneNumber, String addressLine1, String city, String state, double accountBalance) {
         super(accountNumber, accountHolderName, primaryPhoneNumber, addressLine1, city, state, accountBalance);
     }

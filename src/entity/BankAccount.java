@@ -1,6 +1,8 @@
 package entity;
 
-public abstract class BankAccount {
+import service.IBasicAccountServices;
+
+public  class BankAccount implements IBasicAccountServices {
     private long accountNumber;
     private String accountHolderName;
     private long primaryPhoneNumber;
@@ -24,9 +26,7 @@ public abstract class BankAccount {
         this.accountBalance = accountBalance;
     }
 
-    public abstract void deposit(double amount);
 
-    public abstract double withdraw(double amount);
     public long getAccountNumber() {
         return accountNumber;
     }
@@ -93,5 +93,15 @@ public abstract class BankAccount {
         System.out.println("City: " + city);
         System.out.println("State: " + state);
 
+    }
+
+    @Override
+    public void deposit(double amount) {
+
+    }
+
+    @Override
+    public double withdraw(double amount) {
+        return 0;
     }
 }
