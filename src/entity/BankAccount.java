@@ -2,7 +2,7 @@ package entity;
 
 import java.util.ArrayList;
 
-public class BankAccount {
+public abstract class BankAccount {
     private long accountNumber;
     private String accountHolderName;
     private long primaryPhoneNumber;
@@ -10,8 +10,16 @@ public class BankAccount {
     private String addressLine2;
     private String city;
     private String state;
-    public double accountBalance;
+    protected double accountBalance;
     ArrayList<String> statement;
+
+    public BankAccount(long accountNumber, double accountBalance ){
+        this.accountNumber = accountNumber;
+        this.accountBalance=accountBalance;
+    }
+    public abstract void deposit(double amount);
+
+    public abstract void withdraw(double amount);
 
     public long getAccountNumber() {
         return accountNumber;

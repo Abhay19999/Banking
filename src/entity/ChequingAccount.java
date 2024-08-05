@@ -1,4 +1,4 @@
 package entity;
 
-public class ChequingAccount extends BankAccount{
+public class ChequingAccount {
 }

@@ -1,4 +1,4 @@
 package entity;
 
-public class MomentumPlusSavingAccount extends SavingsAcount{
+public class MomentumPlusSavingAccount {
 }
