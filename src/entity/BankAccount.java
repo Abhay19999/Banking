@@ -1,26 +1,32 @@
 package entity;
 
-import java.util.ArrayList;
-
 public abstract class BankAccount {
     private long accountNumber;
     private String accountHolderName;
     private long primaryPhoneNumber;
     private String addressLine1;
-    private String addressLine2;
     private String city;
     private String state;
     protected double accountBalance;
-    ArrayList<String> statement;
 
-    public BankAccount(long accountNumber, double accountBalance ){
-        this.accountNumber = accountNumber;
-        this.accountBalance=accountBalance;
+    public BankAccount() {
     }
+
+    public BankAccount(long accountNumber, String accountHolderName,
+                       long primaryPhoneNumber, String addressLine1, String city,
+                       String state, double accountBalance) {
+        this.accountNumber = accountNumber;
+        this.accountHolderName = accountHolderName;
+        this.primaryPhoneNumber = primaryPhoneNumber;
+        this.addressLine1 = addressLine1;
+        this.city = city;
+        this.state = state;
+        this.accountBalance = accountBalance;
+    }
+
     public abstract void deposit(double amount);
 
-    public abstract void withdraw(double amount);
-
+    public abstract double withdraw(double amount);
     public long getAccountNumber() {
         return accountNumber;
     }
@@ -53,14 +59,6 @@ public abstract class BankAccount {
         this.addressLine1 = addressLine1;
     }
 
-    public String getAddressLine2() {
-        return addressLine2;
-    }
-
-    public void setAddressLine2(String addressLine2) {
-        this.addressLine2 = addressLine2;
-    }
-
     public String getCity() {
         return city;
     }
@@ -83,5 +81,17 @@ public abstract class BankAccount {
 
     public void setAccountBalance(double accountBalance) {
         this.accountBalance = accountBalance;
+    }
+
+    public void displayBankInfo() {
+        System.out.println("=============== Bank Account Info ==================");
+        System.out.println("Account Number : " + accountNumber);
+        System.out.println("Account Holder Name : " +  accountHolderName);
+        System.out.println("Account Balance : " + accountBalance);
+        System.out.println("Phone Number: " +  primaryPhoneNumber);
+        System.out.println("Address: " + addressLine1);
+        System.out.println("City: " + city);
+        System.out.println("State: " + state);
+
     }
 }
