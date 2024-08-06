@@ -1,9 +1,11 @@
 package entity;
 
+import service.IBasicAccountServices;
+
 import javax.management.RuntimeMBeanException;
 import java.util.Collections;
 
-public class SavingsAccount extends BankAccount{
+public class SavingsAccount extends BankAccount {
     private double interestRate;
 
     public double getInterestRate() {

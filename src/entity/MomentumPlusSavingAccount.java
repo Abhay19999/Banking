@@ -28,17 +28,6 @@ public class MomentumPlusSavingAccount extends SavingsAccount {
         transactionHistory.add("Deposit: $" + amount + ", New balance: $" + accountBalance);
     }
 
-    @Override
-    public double withdraw(double withAmount) {
-        if (withAmount <= 0) {
-            throw new RuntimeException("You cant withdraw zero(0) or Negative Amount.");
-        } else if (withAmount > accountBalance) {
-            throw new RuntimeException("You don't have sufficient balance to withdraw. Please check your balance");
-        } else {
-            accountBalance = accountBalance - withAmount;
-            return withAmount;
-        }
-    }
 
         public void applyMonthlyFee () {
             if (accountBalance >= monthlyFee) {

@@ -13,15 +13,19 @@ public class Main {
 //        savingsAccount.deposit(122);
 //        savingsAccount.displayBankInfo();
 //
-//        ChequingAccount chequingAccount = new ChequingAccount(123456789L, "Karan",
-//                4389271441L, "1234 Devon Road", "London", "Ontario",
-//                50000.0d);
+        ChequingAccount chequingAccount = new ChequingAccount(123456789L,
+                "Karan",
+                4389271441L, "1234 Devon Road", "London", "Ontario",
+                50000.0d, 1500);
 //
 //        ChequingAccount chequingAccount1 = new StudentBankingAdvantagePlan(987654321L, "Peter",
 //                2342342342L, "999 First Street", "St Thomas", "Ontario",
 //                40000, true);
 //
-//        chequingAccount.displayBankInfo();
+        chequingAccount.withdraw(100);
+        chequingAccount.displayBankInfo();
+
+
 //        chequingAccount1.displayBankInfo();
 
 
@@ -36,6 +40,7 @@ public class Main {
 //        m_account.applyMonthlyFee();
 //        m_account.printTransactionHistory();
         m_account.displayBankInfo();
+
 
 
     }
