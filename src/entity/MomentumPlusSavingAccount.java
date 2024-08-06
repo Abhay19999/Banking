@@ -22,11 +22,11 @@ public class MomentumPlusSavingAccount extends SavingsAccount {
         this.tieredInterestRate = tieredInterestRate;
     }
 
-    @Override
-    public void deposit(double amount) {
-        super.deposit(amount);
-        transactionHistory.add("Deposit: $" + amount + ", New balance: $" + accountBalance);
-    }
+//    @Override
+//    public void deposit(double amount) {
+//        super.deposit(amount);
+//        transactionHistory.add("Deposit: $" + amount + ", New balance: $" + accountBalance);
+//    }
 
 
         public void applyMonthlyFee () {
@@ -80,7 +80,7 @@ public class MomentumPlusSavingAccount extends SavingsAccount {
 
     @Override
     public void addInterest() {
-        super.addInterest();
+
         double interestRateToApply = accountBalance >= 5000 ? tieredInterestRate : getInterestRate();
             double interestAdded = accountBalance * (interestRateToApply + bonusInterestRate);
             accountBalance += interestAdded;
