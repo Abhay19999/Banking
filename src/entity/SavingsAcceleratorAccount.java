@@ -51,25 +51,13 @@ public class SavingsAcceleratorAccount extends SavingsAccount{
         this.tieredInterestRate = tieredInterestRate;
     }
 
-    @Override
-    public void addInterest() {
-        super.addInterest();
-    }
 
-    @Override
-    public double withdraw(double amount) {
-        super.withdraw(amount);
-        return amount;
-    }
 
-    @Override
-    public void deposit(double amount) {
-        super.deposit(amount);
-    }
+
 
     @Override
     public void displayBankInfo() {
-        System.out.println("Saving accelerator Account");
+        System.out.println("=================== Saving accelerator Account ==================");
         super.displayBankInfo();
         System.out.println("Interest Rate: " + interestRate);
         System.out.println("Minimum Balance: " + minimumBalance);
