@@ -29,6 +29,7 @@ public class Main {
         MomentumPlusSavingAccount m_account = new MomentumPlusSavingAccount(123456789L, "Rushi",
                 434434343L, "Toronto Street", "Toronto", "ON", 41000.0d,
                 0.1d,500.0d, 10.0d, 0.03d);
+        //below commented code throwing the exceptions
         //m_account.deposit(500.0);
         m_account.withdraw(10);
 //        m_account.addInterest();
