@@ -1,5 +1,6 @@
 package entity;
 
+import javax.management.RuntimeMBeanException;
 import java.util.Collections;
 
 public class SavingsAccount extends BankAccount{
@@ -7,15 +8,20 @@ public class SavingsAccount extends BankAccount{
 
 
 
-    public SavingsAccount(long accountNumber, String accountHolderName, long primaryPhoneNumber, String addressLine1, String city, String state, double accountBalance) {
+    public SavingsAccount(long accountNumber, String accountHolderName, long primaryPhoneNumber,
+                          String addressLine1, String city, String state, double accountBalance) {
         super(accountNumber, accountHolderName, primaryPhoneNumber, addressLine1, city, state, accountBalance);
     }
 
 
     @Override
-    public void deposit(double amount) {
-        accountBalance += amount;
-    }
+    public void deposit(double dptAmount) {
+            if(dptAmount<=0 ) {
+                throw new RuntimeException("You cant deposit the Zero(0) or negative amount..");
+            }else {
+                accountBalance = accountBalance + dptAmount;
+            }
+        }
     @Override
     public double withdraw(double withAmount) {
         if(withAmount<=0) {

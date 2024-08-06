@@ -11,8 +11,6 @@ public  class BankAccount implements IBasicAccountServices {
     private String state;
     protected double accountBalance;
 
-    public BankAccount() {
-    }
 
     public BankAccount(long accountNumber, String accountHolderName,
                        long primaryPhoneNumber, String addressLine1, String city,

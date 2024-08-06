@@ -4,8 +4,6 @@ public class ChequingAccount extends BankAccount {
 
     private double overDraftLimit;
 
-    public ChequingAccount() {
-    }
 
     public ChequingAccount(long accountNumber, String accountHolderName, long primaryPhoneNumber,
                            String addressLine1, String city, String state, double accountBalance) {
