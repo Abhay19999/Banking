@@ -9,4 +9,10 @@ public class UltimatePackage extends ChequingAccount{
         super(accountNumber, accountHolderName, primaryPhoneNumber,
                 addressLine1, city, state, accountBalance, overDraftLimit);
     }
+
+    @Override
+    public void displayBankInfo() {
+        super.displayBankInfo();
+        System.out.println("This is the Ultimate Package Class,,,,,");
+    }
 }
