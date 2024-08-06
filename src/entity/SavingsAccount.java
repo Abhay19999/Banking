@@ -6,7 +6,13 @@ import java.util.Collections;
 public class SavingsAccount extends BankAccount{
     private double interestRate;
 
+    public double getInterestRate() {
+        return interestRate;
+    }
 
+    public void setInterestRate(double interestRate) {
+        this.interestRate = interestRate;
+    }
 
     public SavingsAccount(long accountNumber, String accountHolderName, long primaryPhoneNumber,
                           String addressLine1, String city, String state, double accountBalance) {
