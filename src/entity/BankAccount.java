@@ -82,7 +82,6 @@ public  class BankAccount implements IBasicAccountServices {
     }
 
     public void displayBankInfo() {
-        System.out.println("=============== Bank Account Info ==================");
         System.out.println("Account Number : " + accountNumber);
         System.out.println("Account Holder Name : " +  accountHolderName);
         System.out.println("Account Balance : " + accountBalance);

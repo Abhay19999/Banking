@@ -87,4 +87,13 @@ public class MomentumPlusSavingAccount extends SavingsAccount {
             transactionHistory.add("Interest added: $" + interestAdded + ", New balance: $" + accountBalance);
     }
 
+    @Override
+    public void displayBankInfo() {
+        System.out.println("==================== Momentum Plus Saving Account ===============");
+        super.displayBankInfo();
+        System.out.println("Bonus Interest Rate: " + bonusInterestRate);
+        System.out.println("Minimum balance required: " + minimumBalance);
+        System.out.println("Monthly Fee: " + monthlyFee);
+        System.out.println("Tiered Interest Rate: " + tieredInterestRate);
+    }
 }

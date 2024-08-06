@@ -17,16 +17,14 @@ public class Main {
                 "Karan",
                 4389271441L, "1234 Devon Road", "London", "Ontario",
                 50000.0d, 1500);
-//
-//        ChequingAccount chequingAccount1 = new StudentBankingAdvantagePlan(987654321L, "Peter",
-//                2342342342L, "999 First Street", "St Thomas", "Ontario",
-//                40000, true);
-//
+
+        ChequingAccount studentChequingAccount = new StudentBankingAdvantagePlan(987654321L, "Peter",
+                2342342342L, "999 First Street", "St Thomas", "Ontario",
+                40000, 500, true);
+
         chequingAccount.withdraw(100);
         chequingAccount.displayBankInfo();
-
-
-//        chequingAccount1.displayBankInfo();
+        studentChequingAccount.displayBankInfo();
 
 
         //Code is used for MomentumPlusSavingAccount

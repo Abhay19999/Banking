@@ -23,6 +23,7 @@ public class ChequingAccount extends BankAccount {
 
     @Override
     public void displayBankInfo() {
+        System.out.println("==================== Chequing Account Details ==============");
         super.displayBankInfo();
         System.out.println("Over Draft Limit : " + overDraftLimit);
     }

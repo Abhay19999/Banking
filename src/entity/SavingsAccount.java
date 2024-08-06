@@ -45,4 +45,10 @@ public class SavingsAccount extends BankAccount {
         accountBalance += accountBalance * interestRate;
     }
 
+    @Override
+    public void displayBankInfo() {
+        System.out.println("==================== Savings Account Details ===========");
+        super.displayBankInfo();
+        System.out.println("Interest Rate: " + interestRate);
+    }
 }
